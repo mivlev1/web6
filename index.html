@@ -21,33 +21,39 @@
     <span id="total-price">0</span> рублей
   </div>
   <div class="content__value">
-    <input type="text" class="form-control text-center col-auto" id="value" placeholder="Количество товара">
+    <input type="text" class="form-control text-center col-auto" id="value" placeholder="Количество товара" name="count">
     
     <div class="content__datalist m-2 col-auto">
-      <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-      <datalist id="datalistOptions">
+      <!-- <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." name="type">
+      <<datalist id="datalistOptions">
         <option value="Создание сайта">
         <option value="Продвижение сайта">
         <option value="Сайт под ключ">
-      </datalist>
+      </datalist>> -->
+   <select class="form-control" name="type" id="list-select">
+     <option value="1"selected>Создание сайта</option>
+     <option value="0.8">Продвижение сайта</option>
+     <option value="2">Сайт под ключ</option>
+   </select>
+      
     </div>
    
   </div>
 <div class="radio-wrap d-flex justify-content-center">
   <div class="form-check">
-    <input class="form-check-input" type="radio" name="type" id="exampleRadios1" value="1" checked>
+    <input class="form-check-input" type="radio" name="option" id="exampleRadios1" value="1" checked>
     <label class="form-check-label" for="exampleRadios1">
       Default radio
     </label>
   </div>
   <div class="form-check mx-2">
-    <input class="form-check-input" type="radio" name="type" id="exampleRadios2" value="1.2">
+    <input class="form-check-input" type="radio" name="option" id="exampleRadios2" value="1.2">
     <label class="form-check-label" for="exampleRadios2">
       Second default radio
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="radio" name="type" id="exampleRadios3" value="1.5">
+    <input class="form-check-input" type="radio" name="option" id="exampleRadios3" value="1.5">
     <label class="form-check-label" for="exampleRadios3">
       Third default radio
     </label>
@@ -55,13 +61,13 @@
 </div>
   <div class="content d-flex justify-content-center">
     <div class="form-check d-flex align-items-center">
-      <input class="form-check-input" type="checkbox" value="2" id="flexCheckDefault">
+      <input class="form-check-input" type="checkbox" value="2" id="flexCheckDefault" name="first-check">
       <label class="form-check-label m-1" for="flexCheckDefault">
         Первое условие
       </label>
     </div>
     <div class="form-check d-flex align-items-center">
-      <input class="form-check-input" type="checkbox" value="3" id="flexCheckChecked" checked>
+      <input class="form-check-input" type="checkbox" value="3" id="flexCheckChecked" name="second-check" checked>
       <label class="form-check-label m-1" for="flexCheckChecked">
         Второе условие
       </label>

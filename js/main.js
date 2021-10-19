@@ -1,25 +1,39 @@
 const basePrice=1000;
 const inputs=document.querySelectorAll('input');
 const totalPriceElement=document.querySelector('#total-price');
+//количество
+const countOf=document.querySelector('input[name="count"]')
+//список
+const typeList=document.querySelector('select');
 //радиокнопки
-const radioOptions = document.querySelectorAll('input[name="type"]');
-console.log(radioOptions);
+const radioOptions = document.querySelectorAll('input[name="option"]');
+//чекбоксы
+const checkFirst=document.querySelector('input[name="first-check"]');
+const checkSecond = document.querySelector('input[name="second-check"]');
 
 function calc() {
   let totalPrice=basePrice;
- // 
-  // for(const radio of radioType){
-  //   if(radio.checked==true){
-  //     console.log(sdsd);
-  //     //totalPrice=basePrice*parseInt(radio.value);
-  //   }
-  // }
-  // if(radio.checked){
-  //   console.log(hello);
-    //totalPrice=totalPrice*radio.value;
-  //}
+  totalPrice=totalPrice*parseInt(countOf.value);
+  for (let list of typeList) {
+    if (list.selected) {
+      totalPrice = totalPrice * parseFloat(typeList.value);
+    }
+  }
+  for(const radio of radioOptions){
+    if(radio.checked){
+      totalPrice = totalPrice*parseFloat(radio.value);
+    }
+  }
+  if(checkFirst.checked){
+    totalPrice=totalPrice*parseFloat(checkFirst.value);
+  }
+  if (checkSecond.checked) {
+    totalPrice = totalPrice * parseFloat(checkSecond.value);
+  }
+  
   const formatter = new Intl.NumberFormat('ru');
   totalPriceElement.innerText=totalPrice;
+
 }
 for(const input of inputs){
   input.addEventListener('input',function(){
