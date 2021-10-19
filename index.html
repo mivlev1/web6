@@ -12,6 +12,18 @@
 </head>
 
 <body>
+  <form class="m-3 d-flex justify-content-center row g-3">
+    <output class="form-control text-center" name="result" id="result"></output>
+    <div class="col-auto">
+      <input type="text" class="form-control" id="price" placeholder="Цена товара">
+    </div>
+    <div class="col-auto">
+      <input type="text" class="form-control" id="value" placeholder="Количество товара">
+    </div>
+    <div class="col-auto">
+      <button onclick="return total()" id="result-btn" class="btn btn-primary mb-3">Расчитать стоимость</button>
+    </div>
+  </form>
   <div class="form__header p-2 text-center">
     <h1 class="header__title">Калькулятор стоимости сайта</h1>
     <p class="header__text">Цена стандартного сайта = 1000 рублей</p>
@@ -30,11 +42,11 @@
         <option value="Продвижение сайта">
         <option value="Сайт под ключ">
       </datalist>> -->
-   <select class="form-control" name="type" id="list-select">
+   <!-- <select class="form-control" name="type" id="list-select">
      <option value="1"selected>Создание сайта</option>
      <option value="0.8">Продвижение сайта</option>
      <option value="2">Сайт под ключ</option>
-   </select>
+   </select> -->
       
     </div>
    
