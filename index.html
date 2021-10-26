@@ -12,6 +12,7 @@
 </head>
 
 <body>
+  <h2 class="text-center">Калькулятор</h2>
   <form class="m-3 d-flex justify-content-center row g-3">
     <output class="form-control text-center" name="result" id="result"></output>
     <div class="col-auto">
@@ -24,70 +25,35 @@
       <button onclick="return total()" id="result-btn" class="btn btn-primary mb-3">Расчитать стоимость</button>
     </div>
   </form>
-  <div class="form__header p-2 text-center">
-    <h1 class="header__title">Калькулятор стоимости сайта</h1>
-    <p class="header__text">Цена стандартного сайта = 1000 рублей</p>
+  <div class=" text-center сontainer__calc p-2 mt-2  bg-light">
+    <h2 id="calc">Калькулятор мойка</h2>
+    Тип товара:
+    <form>
+      <input class="form-control text-center" type="text" id="select_input" value="" placeholder="Количество">
+      <select class="form-control text-center" name="type" id="select">
+        <option value="1" id="Wash">Мойка</option>
+        <option value="2" id="ComplexWash">Комплексная мойка</option>
+        <option value="3" id="Detail">Детейлинг авто</option>
+      </select>
+      <div id="radio_div">
+        <input type="radio" name="radio_options" id="radio_id" onMouseDown="this.isChecked=this.checked;"
+          onClick="this.checked=!this.isChecked; " />
+        <input class="form-check-input" type="radio" name="radio_options" value="UnderTheHood"
+          onMouseDown="this.isChecked=this.checked;" onClick="this.checked=!this.isChecked;" /> Под капотом
+        <input class="form-check-input" type="radio" name="radio_options" value="Salon"
+          onMouseDown="this.isChecked=this.checked;" onClick="this.checked=!this.isChecked;" /> Салон
+        <input class="form-check-input" type="radio" name="radio_options" value="Outdoor"
+          onMouseDown="this.isChecked=this.checked;" onClick="this.checked=!this.isChecked;" /> Внешняя мойка
+      </div>
+      <div id="check_div">
+        <input class="form-check-input " type="checkbox" name="Polishing" id="Polishing" /> Полировка
+        <input class="form-check-input" type="checkbox" name="Painting" id="Painting" /> Покраска
+        <input class="form-check-input" type="checkbox" name="Chips" id="Chips" /> Убрать сколы
+      </div>
+      <br />
+    </form>
+    <h5 id="price2"></h5>
   </div>
-<form id="form" class="m-3 d-flex justify-content-center row g-3">
-  <div class="container__out text-center p-2 form-control m-2">
-    <span id="total-price">0</span> рублей
-  </div>
-  <div class="content__value">
-    <input type="text" class="form-control text-center col-auto" id="value" placeholder="Количество товара" name="count">
-    
-    <div class="content__datalist m-2 col-auto">
-      <!-- <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." name="type">
-      <<datalist id="datalistOptions">
-        <option value="Создание сайта">
-        <option value="Продвижение сайта">
-        <option value="Сайт под ключ">
-      </datalist>> -->
-   <!-- <select class="form-control" name="type" id="list-select">
-     <option value="1"selected>Создание сайта</option>
-     <option value="0.8">Продвижение сайта</option>
-     <option value="2">Сайт под ключ</option>
-   </select> -->
-      
-    </div>
-   
-  </div>
-<div class="radio-wrap d-flex justify-content-center">
-  <div class="form-check">
-    <input class="form-check-input" type="radio" name="option" id="exampleRadios1" value="1" checked>
-    <label class="form-check-label" for="exampleRadios1">
-      Default radio
-    </label>
-  </div>
-  <div class="form-check mx-2">
-    <input class="form-check-input" type="radio" name="option" id="exampleRadios2" value="1.2">
-    <label class="form-check-label" for="exampleRadios2">
-      Second default radio
-    </label>
-  </div>
-  <div class="form-check">
-    <input class="form-check-input" type="radio" name="option" id="exampleRadios3" value="1.5">
-    <label class="form-check-label" for="exampleRadios3">
-      Third default radio
-    </label>
-  </div>
-</div>
-  <div class="content d-flex justify-content-center">
-    <div class="form-check d-flex align-items-center">
-      <input class="form-check-input" type="checkbox" value="2" id="flexCheckDefault" name="first-check">
-      <label class="form-check-label m-1" for="flexCheckDefault">
-        Первое условие
-      </label>
-    </div>
-    <div class="form-check d-flex align-items-center">
-      <input class="form-check-input" type="checkbox" value="3" id="flexCheckChecked" name="second-check" checked>
-      <label class="form-check-label m-1" for="flexCheckChecked">
-        Второе условие
-      </label>
-    </div>
-  </div>
-  
-
-</form>
 
   <!-- JavaScript and dependencies -->
   <script src="js/main.js"></script>
